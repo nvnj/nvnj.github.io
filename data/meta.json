@@ -1,14 +1,14 @@
 {
   "github": {
     "ok": true,
-    "at": "2026-09-02T00:55:12.707Z",
+    "at": "2026-09-02T02:34:59.944Z",
     "count": 0,
     "error": null
   },
   "devpost": {
-    "ok": false,
-    "at": null,
+    "ok": true,
+    "at": "2026-09-02T02:35:01.082Z",
     "count": 4,
-    "error": "fetch failed"
+    "error": null
   }
 }
