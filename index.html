@@ -102,9 +102,9 @@
             <h3>Software Engineer</h3>
             <div class="org">ScooterLab · UTSA · San Antonio, TX</div>
             <ul class="bul">
-              <li>Design Python ETL pipelines that ingest, time-synchronize, and join 3 data modalities — sensor telemetry, ride video, and tabular trip logs — into one curated store.</li>
+              <li>Design Python ETL pipelines that ingest, time-synchronize, and join 3 data modalities — sensor telemetry, ride video, and tabular trip logs — into one curated store, cutting per-study data preparation by 96%.</li>
               <li>Build backend REST services over PostgreSQL exposing derived ride features to analytics dashboards, replacing ad-hoc SQL pulls for the research team.</li>
-              <li>Instrument pipelines with schema validation, freshness checks, and alerting so data-quality defects surface before ingest rather than mid-study.</li>
+              <li>Instrument pipelines with schema validation, freshness checks, and alerting so data-quality defects surface before ingest rather than mid-study, across 3 stages, saving ~60 hrs/week of manual troubleshooting.</li>
             </ul>
             <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">REST</span><span class="tag">ETL</span><span class="tag">Docker</span><span class="tag">PyTorch</span></div>
           </div>
@@ -116,8 +116,8 @@
             <h3>Graduate Research Assistant</h3>
             <div class="org">CARE Lab · UTSA · San Antonio, TX</div>
             <ul class="bul">
-              <li>Built a retrieval-augmented generation pipeline over electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to answer patient-oriented queries such as procedure recommendation from demographics and medical history.</li>
-              <li>Designed an LLM evaluation framework on semantic-similarity accuracy metrics, quantifying response disparities across 4 demographic axes — gender, race, ethnicity, and age.</li>
+              <li>Built a retrieval-augmented generation pipeline over 10,000 electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to answer patient-oriented queries such as procedure recommendation from demographics and medical history.</li>
+              <li>Designed an LLM evaluation framework on semantic-similarity accuracy metrics, quantifying response disparities across 4 demographic axes — gender, race, ethnicity, and age, scoring 1,000 responses.</li>
               <li>First-authored the resulting study, <em>Evaluating Bias in LLMs' Responses to Patient-Oriented Tasks</em>, submitted to AIM 2026.</li>
             </ul>
             <div class="tags"><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Azure AI Foundry</span><span class="tag">Chroma</span><span class="tag">LLM evaluation</span></div>
@@ -130,9 +130,9 @@
             <h3>Program Analyst</h3>
             <div class="org">Cognizant</div>
             <ul class="bul">
-              <li>Enhanced backend integrations between Salesforce (Apex, SOQL), Java/Python services, and relational databases for enterprise clients, shipping changes into shared codebases owned by multiple teams.</li>
-              <li>Diagnosed production incidents through logs, SQL queries, and dependency traces over 16 months, with root-cause documentation and regression tests on every fix.</li>
-              <li>Partnered with product owners to scope and automate recurring workflows, reducing repeat incidents and removing standing manual effort.</li>
+              <li>Enhanced backend integrations between Salesforce (Apex, SOQL), Java/Python services, and relational databases for an enterprise client, shipping into shared codebases owned by 5 teams.</li>
+              <li>Diagnosed production incidents through logs, SQL queries, and dependency traces over 16 months with root-cause documentation and regression tests on every fix, closing 250+ tickets.</li>
+              <li>Partnered with product owners to scope and automate recurring workflows, reducing repeat incidents and removing standing manual effort, reducing repeat incidents by 90% and removing ~48 hrs/month of manual effort.</li>
             </ul>
             <div class="tags"><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Apex</span><span class="tag">SOQL</span><span class="tag">MySQL</span><span class="tag">Agile</span></div>
           </div>
@@ -150,12 +150,12 @@
           <div>
             <div class="kicker">Current focus</div>
             <h3>Near-Miss Detection via Camera–LiDAR Depth Fusion</h3>
-            <p>Monocular cameras estimate depth cheaply but with systematic bias; LiDAR is accurate but sparse. This fuses both — training against LiDAR point clouds as ground truth to correct the camera's error — then runs the whole inference path on the scooter's onboard compute, where a near-miss has to be called in milliseconds rather than offline.</p>
+            <p>Monocular cameras estimate depth cheaply but with systematic bias; LiDAR is accurate but sparse. Training against LiDAR point clouds as ground truth corrects the camera&#x27;s systematic error and cut depth RMSE by 80% in urban scenes, with the whole inference path running on the scooter&#x27;s onboard compute where a near-miss has to be called in milliseconds rather than offline.</p>
             <div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">PyTorch</span><span class="tag">TensorRT</span><span class="tag">CUDA</span></div>
           </div>
           <dl class="facts">
             <div class="fact"><dt>Modalities</dt><dd>2 fused</dd></div>
-            <div class="fact"><dt>Ground truth</dt><dd>LiDAR</dd></div>
+            <div class="fact"><dt>Depth RMSE</dt><dd>−80%</dd></div>
             <div class="fact"><dt>Evaluated on</dt><dd>RMSE · MAE · TTC</dd></div>
             <div class="fact"><dt>Target</dt><dd>Edge / onboard</dd></div>
           </dl>
@@ -165,7 +165,7 @@
       <div data-bind="repos">
         <a class="work" href="https://github.com/nvnj/UTSAFindMySpot" rel="noopener">
           <div><div class="work-t">UTSAFindMySpot <span class="arw">↗</span></div>
-          <p>Parking management system reading live CCTV footage — per-bay ROI extraction, YOLO11 detection, and a Laravel dashboard surfacing real-time occupancy to students.</p></div>
+          <p>Parking management system reading live CCTV footage at 10 FPS — per-bay ROI extraction, YOLO11 detection, and a Laravel dashboard surfacing real-time occupancy to students. Denoising and contrast normalization cut false positives by 90%.</p></div>
           <div class="work-m"><span class="lang"><i style="background:#4F5D95"></i>PHP</span><span>MAR 2025</span></div>
         </a>
         <a class="work" href="https://github.com/nvnj/FairLane" rel="noopener">
@@ -180,7 +180,7 @@
         </a>
         <a class="work" href="https://github.com/nvnj" rel="noopener">
           <div><div class="work-t">RAMP — Research Data Export Platform <span class="arw">↗</span></div>
-          <p>Backend REST endpoints and matching front-end views for managing and exporting research datasets, with input validation, structured error handling, and request logging.</p></div>
+          <p>5 backend REST endpoints and the matching front-end views for managing and exporting research datasets, with input validation, structured error handling, and request logging that cut support requests by 10%. Built in a 2-person team; 100+ pull requests merged with zero rollbacks.</p></div>
           <div class="work-m"><span class="lang"><i style="background:#4F5D95"></i>PHP</span><span>SCOOTERLAB</span></div>
         </a>
       </div>
@@ -192,7 +192,7 @@
       <div class="hacks" data-bind="hackathons">
         <a class="hack" href="https://devpost.com/software/utsa-findmyspot" rel="noopener">
           <div class="hack-top"><h3>UTSA FindMySpot</h3><span class="prize">2nd Overall</span></div>
-          <p>Computer vision that detects open parking spots from existing campus cameras and pushes real-time availability to students — no new hardware on the lots.</p>
+          <p>Computer vision that detects open parking spots from existing campus cameras at 10 FPS and pushes real-time availability to students — 99% detection accuracy, no new hardware on the lots.</p>
           <div class="hack-m"><span>ROWDYHACKS XI</span><span>YOLO11 · OPENCV · LARAVEL</span><span>♥ 9</span></div>
         </a>
         <a class="hack" href="https://devpost.com/software/fairlane" rel="noopener">

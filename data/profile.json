@@ -1,9 +1,12 @@
 {
-  "_note": "Source of truth for the site AND the LaTeX resume. Each bullet may carry an optional `metric`: a COMPLETE clause appended before the period. `metricHint` names the number still needed and is ignored by the renderer.",
+  "_note": "Source of truth for the site AND the LaTeX resume. `metric` is a COMPLETE clause appended before the period; a bullet without one still reads correctly. `metricHint` marks a number still outstanding.",
   "name": "Naveen John",
   "tagline": "I build the data and ML systems behind micro-mobility safety research — camera–LiDAR sensor fusion, multi-modal ETL, and the backend services that put derived ride features in researchers' hands.",
   "location": "San Antonio, TX",
-  "status": { "open": true, "text": "Open to SWE & ML roles" },
+  "status": {
+    "open": true,
+    "text": "Open to SWE & ML roles"
+  },
   "email": "naveen.john5689@gmail.com",
   "links": {
     "github": "https://github.com/nvnj",
@@ -19,14 +22,27 @@
       "start": "2025-07",
       "end": null,
       "bullets": [
-        { "text": "Design Python ETL pipelines that ingest, time-synchronize, and join 3 data modalities — sensor telemetry, ride video, and tabular trip logs — into one curated store.",
-          "metric": null, "metricHint": "cutting per-study data preparation by N%" },
-        { "text": "Build backend REST services over PostgreSQL exposing derived ride features to analytics dashboards, replacing ad-hoc SQL pulls for the research team.",
-          "metric": null, "metricHint": "serving N researchers and cutting average query turnaround by N%" },
-        { "text": "Instrument pipelines with schema validation, freshness checks, and alerting so data-quality defects surface before ingest rather than mid-study.",
-          "metric": null, "metricHint": "across N stages, saving ~N hrs/week of manual troubleshooting" }
+        {
+          "text": "Design Python ETL pipelines that ingest, time-synchronize, and join 3 data modalities — sensor telemetry, ride video, and tabular trip logs — into one curated store.",
+          "metric": "cutting per-study data preparation by 96%"
+        },
+        {
+          "text": "Build backend REST services over PostgreSQL exposing derived ride features to analytics dashboards, replacing ad-hoc SQL pulls for the research team.",
+          "metric": null
+        },
+        {
+          "text": "Instrument pipelines with schema validation, freshness checks, and alerting so data-quality defects surface before ingest rather than mid-study.",
+          "metric": "across 3 stages, saving ~60 hrs/week of manual troubleshooting"
+        }
       ],
-      "stack": ["Python", "PostgreSQL", "REST", "ETL", "Docker", "PyTorch"]
+      "stack": [
+        "Python",
+        "PostgreSQL",
+        "REST",
+        "ETL",
+        "Docker",
+        "PyTorch"
+      ]
     },
     {
       "title": "Graduate Research Assistant",
@@ -35,14 +51,26 @@
       "start": "2024-09",
       "end": "2025-07",
       "bullets": [
-        { "text": "Built a retrieval-augmented generation pipeline over electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to answer patient-oriented queries such as procedure recommendation from demographics and medical history.",
-          "metric": null, "metricHint": "over NK electronic health records" },
-        { "text": "Designed an LLM evaluation framework on semantic-similarity accuracy metrics, quantifying response disparities across 4 demographic axes — gender, race, ethnicity, and age.",
-          "metric": null, "metricHint": "scoring NK responses" },
-        { "text": "First-authored the resulting study, Evaluating Bias in LLMs' Responses to Patient-Oriented Tasks, submitted to AIM 2026.",
-          "metric": null, "metricHint": null }
+        {
+          "text": "Built a retrieval-augmented generation pipeline over 10,000 electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to answer patient-oriented queries such as procedure recommendation from demographics and medical history.",
+          "metric": null
+        },
+        {
+          "text": "Designed an LLM evaluation framework on semantic-similarity accuracy metrics, quantifying response disparities across 4 demographic axes — gender, race, ethnicity, and age.",
+          "metric": "scoring 1,000 responses"
+        },
+        {
+          "text": "First-authored the resulting study, Evaluating Bias in LLMs' Responses to Patient-Oriented Tasks, submitted to AIM 2026.",
+          "metric": null
+        }
       ],
-      "stack": ["RAG", "LangChain", "Azure AI Foundry", "Chroma", "LLM evaluation"]
+      "stack": [
+        "RAG",
+        "LangChain",
+        "Azure AI Foundry",
+        "Chroma",
+        "LLM evaluation"
+      ]
     },
     {
       "title": "Program Analyst",
@@ -51,30 +79,97 @@
       "start": "2023-03",
       "end": "2024-07",
       "bullets": [
-        { "text": "Enhanced backend integrations between Salesforce (Apex, SOQL), Java/Python services, and relational databases for enterprise clients, shipping changes into shared codebases owned by multiple teams.",
-          "metric": null, "metricHint": "for N enterprise clients across N teams" },
-        { "text": "Diagnosed production incidents through logs, SQL queries, and dependency traces over 16 months, with root-cause documentation and regression tests on every fix.",
-          "metric": null, "metricHint": "closing N+ tickets" },
-        { "text": "Partnered with product owners to scope and automate recurring workflows, reducing repeat incidents and removing standing manual effort.",
-          "metric": null, "metricHint": "reducing repeat incidents by N% and removing ~N hrs/month" }
+        {
+          "text": "Enhanced backend integrations between Salesforce (Apex, SOQL), Java/Python services, and relational databases for an enterprise client.",
+          "metric": "shipping into shared codebases owned by 5 teams"
+        },
+        {
+          "text": "Diagnosed production incidents through logs, SQL queries, and dependency traces over 16 months with root-cause documentation and regression tests on every fix.",
+          "metric": "closing 250+ tickets"
+        },
+        {
+          "text": "Partnered with product owners to scope and automate recurring workflows, reducing repeat incidents and removing standing manual effort.",
+          "metric": "reducing repeat incidents by 90% and removing ~48 hrs/month of manual effort"
+        }
       ],
-      "stack": ["Java", "Python", "Apex", "SOQL", "MySQL", "Agile"]
+      "stack": [
+        "Java",
+        "Python",
+        "Apex",
+        "SOQL",
+        "MySQL",
+        "Agile"
+      ]
     }
   ],
   "education": [
     {
       "school": "University of Texas at San Antonio",
       "degree": "MS, Computer Science",
-      "start": "2024-08", "end": "2026-05",
+      "start": "2024-08",
+      "end": "2026-05",
       "gpa": "3.93 / 4.00",
-      "coursework": ["Machine Learning","Data Mining","Data Science","Cloud Computing","Parallel Processing","Analysis of Algorithms","Operating Systems","Computer Architecture"]
+      "coursework": [
+        "Machine Learning",
+        "Data Mining",
+        "Data Science",
+        "Cloud Computing",
+        "Parallel Processing",
+        "Analysis of Algorithms",
+        "Operating Systems",
+        "Computer Architecture"
+      ]
     }
   ],
   "skills": {
-    "Languages": ["Python","Java","C++","C","SQL","TypeScript","JavaScript","PHP","Apex","SOQL"],
-    "Backend & Data": ["REST APIs","Microservices","System design","ETL","Data modeling","PostgreSQL","MySQL","Redis"],
-    "Cloud & Infra": ["AWS (EC2, S3, VPC)","Azure","Docker","Kubernetes","Linux","CI/CD","Git","Observability"],
-    "AI & ML": ["PyTorch","RAG pipelines","LLM evaluation","LangChain","Chroma","Ollama","OpenCV","YOLO","Sensor fusion","CUDA","TensorRT"],
-    "Certifications": ["Microsoft Azure Certified","7× Salesforce Certified"]
+    "Languages": [
+      "Python",
+      "Java",
+      "C++",
+      "C",
+      "SQL",
+      "TypeScript",
+      "JavaScript",
+      "PHP",
+      "Apex",
+      "SOQL"
+    ],
+    "Backend & Data": [
+      "REST APIs",
+      "Microservices",
+      "System design",
+      "ETL",
+      "Data modeling",
+      "PostgreSQL",
+      "MySQL",
+      "Redis"
+    ],
+    "Cloud & Infra": [
+      "AWS (EC2, S3, VPC)",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "CI/CD",
+      "Git",
+      "Observability"
+    ],
+    "AI & ML": [
+      "PyTorch",
+      "RAG pipelines",
+      "LLM evaluation",
+      "LangChain",
+      "Chroma",
+      "Ollama",
+      "OpenCV",
+      "YOLO",
+      "Sensor fusion",
+      "CUDA",
+      "TensorRT"
+    ],
+    "Certifications": [
+      "Microsoft Azure Certified",
+      "7× Salesforce Certified"
+    ]
   }
 }

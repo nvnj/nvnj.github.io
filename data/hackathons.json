@@ -3,25 +3,72 @@
   "user": "nvnj",
   "fetchedAt": null,
   "projects": [
-    { "slug": "utsa-findmyspot", "name": "UTSA FindMySpot",
+    {
+      "slug": "utsa-findmyspot",
+      "name": "UTSA FindMySpot",
       "url": "https://devpost.com/software/utsa-findmyspot",
-      "tagline": "Computer vision that detects open parking spots from existing campus cameras and pushes real-time availability to students — no new hardware on the lots.",
-      "hackathon": "RowdyHacks XI", "award": "2nd Overall", "won": true, "likes": 9,
-      "stack": ["YOLO11", "OpenCV", "Laravel"], "year": 2025, "order": 1 },
-    { "slug": "fairlane", "name": "FairLane",
+      "tagline": "Computer vision that detects open parking spots from existing campus cameras at 10 FPS and pushes real-time availability to students — 99% detection accuracy, no new hardware on the lots.",
+      "hackathon": "RowdyHacks XI",
+      "award": "2nd Overall",
+      "won": true,
+      "likes": 9,
+      "stack": [
+        "YOLO11",
+        "OpenCV",
+        "Laravel"
+      ],
+      "year": 2025,
+      "order": 1
+    },
+    {
+      "slug": "fairlane",
+      "name": "FairLane",
       "url": "https://devpost.com/software/fairlane",
       "tagline": "AI that catches its own bias — FairLane audits every loan decision across demographic variants before a human signs off, turning fairness from an after-the-fact report into a gate.",
-      "hackathon": "", "award": "", "won": false, "likes": null,
-      "stack": ["Python", "LLM", "Fairness audit"], "year": 2026, "order": 2 },
-    { "slug": "cityshield", "name": "CityShield",
+      "hackathon": "",
+      "award": "",
+      "won": false,
+      "likes": null,
+      "stack": [
+        "Python",
+        "LLM",
+        "Fairness audit"
+      ],
+      "year": 2026,
+      "order": 2
+    },
+    {
+      "slug": "cityshield",
+      "name": "CityShield",
       "url": "https://devpost.com/software/cityshield",
       "tagline": "Situational awareness agent for the 2026 World Cup — monitors crowd density, traffic flow, and public sentiment together to flag crowd-crush risk before it forms.",
-      "hackathon": "", "award": "", "won": false, "likes": null,
-      "stack": ["Python", "Agents", "Real-time"], "year": 2026, "order": 3 },
-    { "slug": "finalstint", "name": "FinalStint",
+      "hackathon": "",
+      "award": "",
+      "won": false,
+      "likes": null,
+      "stack": [
+        "Python",
+        "Agents",
+        "Real-time"
+      ],
+      "year": 2026,
+      "order": 3
+    },
+    {
+      "slug": "finalstint",
+      "name": "FinalStint",
       "url": "https://devpost.com/software/finalstint",
       "tagline": "F1-themed Pomodoro clock with an interactive archives hub and race-inspired stats that predict your next session's performance.",
-      "hackathon": "", "award": "", "won": false, "likes": null,
-      "stack": ["JavaScript", "Data viz"], "year": 2026, "order": 4 }
+      "hackathon": "",
+      "award": "",
+      "won": false,
+      "likes": null,
+      "stack": [
+        "JavaScript",
+        "Data viz"
+      ],
+      "year": 2026,
+      "order": 4
+    }
   ]
 }
