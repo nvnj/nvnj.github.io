@@ -27,12 +27,12 @@
           "metric": "cutting per-study data preparation by 96%"
         },
         {
-          "text": "Build backend REST services over PostgreSQL exposing derived ride features to analytics dashboards, replacing ad-hoc SQL pulls for the research team.",
-          "metric": null
+          "text": "Build backend REST services over PostgreSQL exposing derived ride features to analytics dashboards.",
+          "metric": "replacing ad-hoc SQL pulls for 7 research teams across 10+ projects and halving average query turnaround"
         },
         {
           "text": "Instrument pipelines with schema validation, freshness checks, and alerting so data-quality defects surface before ingest rather than mid-study.",
-          "metric": "across 3 stages, saving ~60 hrs/week of manual troubleshooting"
+          "metric": "across 3 stages, saving ~6 hrs/week of manual troubleshooting"
         }
       ],
       "stack": [
@@ -52,15 +52,15 @@
       "end": "2025-07",
       "bullets": [
         {
-          "text": "Built a retrieval-augmented generation pipeline over 10,000 electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to answer patient-oriented queries such as procedure recommendation from demographics and medical history.",
+          "text": "Built a retrieval-augmented generation pipeline over 10,000 electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to recommend the most frequent hospital procedures from a patient's demographics and medical history.",
           "metric": null
         },
         {
-          "text": "Designed an LLM evaluation framework on semantic-similarity accuracy metrics, quantifying response disparities across 4 demographic axes — gender, race, ethnicity, and age.",
-          "metric": "scoring 1,000 responses"
+          "text": "Designed an LLM evaluation framework scoring 1,000 responses on semantic similarity to known procedures, surfacing accuracy gaps of up to 9% across gender, race, ethnicity, and age — and showing those gaps shift when the models recommend five procedures instead of three.",
+          "metric": null
         },
         {
-          "text": "First-authored the resulting study, Evaluating Bias in LLMs' Responses to Patient-Oriented Tasks, submitted to AIM 2026.",
+          "text": "First-authored Evaluating Bias in LLMs' Responses to Patient-Oriented Tasks with Dr. Ke Yang (UTSA College of AI, Cyber, and Computing), submitted to AIM 2026.",
           "metric": null
         }
       ],
@@ -69,7 +69,8 @@
         "LangChain",
         "Azure AI Foundry",
         "Chroma",
-        "LLM evaluation"
+        "LLM evaluation",
+        "Fairness"
       ]
     },
     {

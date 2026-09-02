@@ -33,7 +33,7 @@
   },
   "UTSAFindMySpot": {
     "title": "UTSAFindMySpot",
-    "blurb": "Parking management system reading live CCTV footage at 10 FPS — per-bay ROI extraction, YOLO11 detection, and a Laravel dashboard surfacing real-time occupancy to students. Denoising and contrast normalization cut false positives by 90%.",
+    "blurb": "Parking management system reading live CCTV footage at 10 FPS — per-bay ROI extraction, YOLO11 detection, and a Laravel dashboard surfacing real-time occupancy to students. A pretrained YOLO11 fine-tuned on 1,000+ annotated lot images reaches 90% detection accuracy; denoising and contrast normalization cut false positives by 90%.",
     "order": 2,
     "stack": [
       "PHP",

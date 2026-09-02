@@ -7,7 +7,7 @@
       "slug": "utsa-findmyspot",
       "name": "UTSA FindMySpot",
       "url": "https://devpost.com/software/utsa-findmyspot",
-      "tagline": "Computer vision that detects open parking spots from existing campus cameras at 10 FPS and pushes real-time availability to students — 99% detection accuracy, no new hardware on the lots.",
+      "tagline": "Computer vision that detects open parking spots from existing campus cameras at 10 FPS and pushes real-time availability to students — 90% detection accuracy, no new hardware on the lots.",
       "hackathon": "RowdyHacks XI",
       "award": "2nd Overall",
       "won": true,
