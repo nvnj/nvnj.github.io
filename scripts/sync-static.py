@@ -67,12 +67,30 @@ facts = "\n".join(
     for f in nm.get('facts', []))
 src = sub(r'<dl class="facts">.*?</dl>', f'<dl class="facts">\n{facts}\n          </dl>', src, "facts")
 
-for repo_heading, key in [("UTSAFindMySpot", "UTSAFindMySpot"), ("FairLane", "FairLane"), ("CityShield", "CityShield")]:
-    blurb = overrides.get(key, {}).get('blurb')
-    if not blurb:
-        continue
-    src = sub(r'(<div class="work-t">' + re.escape(repo_heading) + r'\s*<span class="arw">↗</span></div>\s*)<p>.*?</p>',
-              lambda m, b=blurb: m.group(1) + '<p>' + html.escape(b) + '</p>', src, f"repo blurb {repo_heading}")
+def repo_rows():
+    """Every non-featured repo, straight from overrides.json, ordered."""
+    items = [(k, v) for k, v in overrides.items()
+             if not k.startswith('_') and not v.get('featured')]
+    items.sort(key=lambda kv: kv[1].get('order', 999))
+    out = ['<div data-bind="repos">\n']
+    for name, v in items:
+        url = v.get('url') or f'https://github.com/nvnj/{name}'
+        out += [f'        <a class="work" href="{html.escape(url)}" rel="noopener">\n',
+                '          <div><div class="work-t">',
+                html.escape(v.get('title', name)),
+                ' <span class="arw">↗</span></div>\n',
+                f'          <p>{html.escape(v.get("blurb",""))}</p></div>\n',
+                '          <div class="work-m">']
+        if v.get('language'):
+            out.append(f'<span class="lang"><i style="background:{html.escape(v["languageColor"])}"></i>'
+                       f'{html.escape(v["language"])}</span>')
+        if v.get('staticDate'):
+            out.append(f'<span>{html.escape(v["staticDate"])}</span>')
+        out.append('</div>\n        </a>\n')
+    out.append('      </div>')
+    return "".join(out)
+
+src = sub(r'<div data-bind="repos">.*?\n      </div>', lambda m: repo_rows(), src, "repo list")
 
 for pr in hacks['projects']:
     prize = f'<span class="prize">{html.escape(pr["award"])}</span>' if pr['won'] else '<span class="prize none">Submitted</span>'

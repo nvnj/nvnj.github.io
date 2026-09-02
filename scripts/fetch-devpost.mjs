@@ -4,6 +4,10 @@ import { patchMeta } from './meta.mjs';
 const USER = process.env.DEVPOST_USER || 'nvnj';
 const UA = 'Mozilla/5.0 (compatible; nvnj-portfolio-sync/1.0; +https://nvnj.github.io)';
 
+// Devpost slugs to ignore — duplicate submissions of the same project. Without
+// this the sync appends a second card for the same build.
+const IGNORE = new Set(['fairlane-eiw6yt']);
+
 const strip = s => String(s).replace(/<[^>]+>/g, '').replace(/&amp;/g, '&')
   .replace(/&#39;|&rsquo;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
 
@@ -66,6 +70,7 @@ async function main() {
   const bySlug = new Map(file.projects.map(p => [p.slug, p]));
   let added = 0;
   for (const f of fetched) {
+    if (IGNORE.has(f.slug)) continue;
     const cur = bySlug.get(f.slug);
     if (cur) {
       if (f.likes != null) cur.likes = f.likes;

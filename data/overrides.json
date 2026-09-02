@@ -29,12 +29,15 @@
         "label": "Target",
         "value": "Edge / onboard"
       }
-    ]
+    ],
+    "language": "Python",
+    "languageColor": "#3572A5",
+    "staticDate": "SCOOTERLAB"
   },
   "UTSAFindMySpot": {
     "title": "UTSAFindMySpot",
     "blurb": "Parking management system reading live CCTV footage at 10 FPS — per-bay ROI extraction, YOLO11 detection, and a Laravel dashboard surfacing real-time occupancy to students. A pretrained YOLO11 fine-tuned on 1,000+ annotated lot images reaches 90% detection accuracy; denoising and contrast normalization cut false positives by 90%.",
-    "order": 2,
+    "order": 3,
     "stack": [
       "PHP",
       "Laravel",
@@ -42,26 +45,41 @@
       "OpenCV",
       "YOLO11",
       "MySQL"
-    ]
+    ],
+    "language": "PHP",
+    "languageColor": "#4F5D95",
+    "staticDate": "MAR 2025"
   },
   "FairLane": {
-    "title": "FairLane",
-    "blurb": "Fair-lending co-pilot that audits its own credit decisions for demographic bias, replaying each application across demographic variants before a human signs off.",
-    "order": 3,
+    "title": "FairLane — Fair-Lending Decision Auditor",
+    "blurb": "A five-stage agent pipeline that drafts a credit decision from financial factors alone, then generates counterfactual applications differing in one protected attribute at a time and re-scores each one. Decision flips and approval gaps above threshold escalate to a human reviewer, with every stage traced and judged in Arize Phoenix.",
+    "order": 2,
     "stack": [
       "Python",
-      "LLM",
-      "Fairness audit"
-    ]
+      "FastAPI",
+      "Gemini / Vertex AI",
+      "Agent Builder",
+      "Arize Phoenix",
+      "React"
+    ],
+    "language": "Python",
+    "languageColor": "#3572A5",
+    "staticDate": "2026"
   },
   "CityShield": {
-    "title": "CityShield",
-    "blurb": "Situational awareness agent for large public events, fusing crowd density, traffic flow, and public sentiment into a single crowd-crush risk signal.",
+    "title": "CityShield — Situational Awareness Agent",
+    "blurb": "Fuses crowd density from computer vision, traffic flow, and public sentiment into Elasticsearch, then correlates all three with Gemini every 30 seconds — so a density spike arriving alongside a sentiment drop escalates differently from either signal alone. Every proposed response needs explicit operator approval.",
     "order": 4,
     "stack": [
       "Python",
-      "Agents",
-      "Real-time"
-    ]
+      "FastAPI",
+      "Gemini",
+      "Elasticsearch",
+      "OpenCV",
+      "Cloud Run"
+    ],
+    "language": "Python",
+    "languageColor": "#3572A5",
+    "staticDate": "2026"
   }
 }
