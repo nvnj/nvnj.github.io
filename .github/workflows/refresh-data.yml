@@ -1,0 +1,50 @@
+name: Refresh portfolio data
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 06:00 UTC = 01:00 Central
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "data/overrides.json"
+
+permissions:
+  contents: write             # required: the default token is read-only
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch GitHub repos
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: nvnj
+        run: node scripts/fetch-github.mjs
+
+      - name: Fetch Devpost projects
+        env:
+          DEVPOST_USER: nvnj
+        run: node scripts/fetch-devpost.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github.json data/hackathons.json data/meta.json
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore(data): refresh GitHub + Devpost"
+            git push
+          fi

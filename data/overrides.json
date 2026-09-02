@@ -1,0 +1,34 @@
+{
+  "_note": "Presence on the site is controlled by the GitHub topic `portfolio`. Copy, order and the featured slot are controlled here. A repo with no entry falls back to its GitHub description.",
+  "Nearmiss": {
+    "title": "Near-Miss Detection via Camera–LiDAR Depth Fusion",
+    "blurb": "Monocular cameras estimate depth cheaply but with systematic bias; LiDAR is accurate but sparse. This fuses both — training against LiDAR point clouds as ground truth to correct the camera's error — then runs the whole inference path on the scooter's onboard compute, where a near-miss has to be called in milliseconds rather than offline.",
+    "featured": true,
+    "order": 1,
+    "stack": ["Python", "C++", "PyTorch", "TensorRT", "CUDA"],
+    "facts": [
+      { "label": "Modalities", "value": "2 fused" },
+      { "label": "Ground truth", "value": "LiDAR" },
+      { "label": "Evaluated on", "value": "RMSE · MAE · TTC" },
+      { "label": "Target", "value": "Edge / onboard" }
+    ]
+  },
+  "UTSAFindMySpot": {
+    "title": "UTSAFindMySpot",
+    "blurb": "Parking management system reading live CCTV footage — per-bay ROI extraction, YOLO11 detection, and a Laravel dashboard surfacing real-time occupancy to students.",
+    "order": 2,
+    "stack": ["PHP", "Laravel", "Python", "OpenCV", "YOLO11", "MySQL"]
+  },
+  "FairLane": {
+    "title": "FairLane",
+    "blurb": "Fair-lending co-pilot that audits its own credit decisions for demographic bias, replaying each application across demographic variants before a human signs off.",
+    "order": 3,
+    "stack": ["Python", "LLM", "Fairness audit"]
+  },
+  "CityShield": {
+    "title": "CityShield",
+    "blurb": "Situational awareness agent for large public events, fusing crowd density, traffic flow, and public sentiment into a single crowd-crush risk signal.",
+    "order": 4,
+    "stack": ["Python", "Agents", "Real-time"]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "_note": "Source of truth for the site AND the LaTeX resume. Each bullet may carry an optional `metric`: a COMPLETE clause appended before the period. `metricHint` names the number still needed and is ignored by the renderer.",
+  "name": "Naveen John",
+  "tagline": "I build the data and ML systems behind micro-mobility safety research — camera–LiDAR sensor fusion, multi-modal ETL, and the backend services that put derived ride features in researchers' hands.",
+  "location": "San Antonio, TX",
+  "status": { "open": true, "text": "Open to SWE & ML roles" },
+  "email": "naveen.john5689@gmail.com",
+  "links": {
+    "github": "https://github.com/nvnj",
+    "linkedin": "https://linkedin.com/in/nvnj",
+    "devpost": "https://devpost.com/nvnj",
+    "resume": "/resume.pdf"
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "org": "ScooterLab · UTSA",
+      "location": "San Antonio, TX",
+      "start": "2025-07",
+      "end": null,
+      "bullets": [
+        { "text": "Design Python ETL pipelines that ingest, time-synchronize, and join 3 data modalities — sensor telemetry, ride video, and tabular trip logs — into one curated store.",
+          "metric": null, "metricHint": "cutting per-study data preparation by N%" },
+        { "text": "Build backend REST services over PostgreSQL exposing derived ride features to analytics dashboards, replacing ad-hoc SQL pulls for the research team.",
+          "metric": null, "metricHint": "serving N researchers and cutting average query turnaround by N%" },
+        { "text": "Instrument pipelines with schema validation, freshness checks, and alerting so data-quality defects surface before ingest rather than mid-study.",
+          "metric": null, "metricHint": "across N stages, saving ~N hrs/week of manual troubleshooting" }
+      ],
+      "stack": ["Python", "PostgreSQL", "REST", "ETL", "Docker", "PyTorch"]
+    },
+    {
+      "title": "Graduate Research Assistant",
+      "org": "CARE Lab · UTSA",
+      "location": "San Antonio, TX",
+      "start": "2024-09",
+      "end": "2025-07",
+      "bullets": [
+        { "text": "Built a retrieval-augmented generation pipeline over electronic health records, serving 2 LLMs (GPT-4.1, DeepSeek v3.1) through Azure AI Foundry to answer patient-oriented queries such as procedure recommendation from demographics and medical history.",
+          "metric": null, "metricHint": "over NK electronic health records" },
+        { "text": "Designed an LLM evaluation framework on semantic-similarity accuracy metrics, quantifying response disparities across 4 demographic axes — gender, race, ethnicity, and age.",
+          "metric": null, "metricHint": "scoring NK responses" },
+        { "text": "First-authored the resulting study, Evaluating Bias in LLMs' Responses to Patient-Oriented Tasks, submitted to AIM 2026.",
+          "metric": null, "metricHint": null }
+      ],
+      "stack": ["RAG", "LangChain", "Azure AI Foundry", "Chroma", "LLM evaluation"]
+    },
+    {
+      "title": "Program Analyst",
+      "org": "Cognizant",
+      "location": "",
+      "start": "2023-03",
+      "end": "2024-07",
+      "bullets": [
+        { "text": "Enhanced backend integrations between Salesforce (Apex, SOQL), Java/Python services, and relational databases for enterprise clients, shipping changes into shared codebases owned by multiple teams.",
+          "metric": null, "metricHint": "for N enterprise clients across N teams" },
+        { "text": "Diagnosed production incidents through logs, SQL queries, and dependency traces over 16 months, with root-cause documentation and regression tests on every fix.",
+          "metric": null, "metricHint": "closing N+ tickets" },
+        { "text": "Partnered with product owners to scope and automate recurring workflows, reducing repeat incidents and removing standing manual effort.",
+          "metric": null, "metricHint": "reducing repeat incidents by N% and removing ~N hrs/month" }
+      ],
+      "stack": ["Java", "Python", "Apex", "SOQL", "MySQL", "Agile"]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Texas at San Antonio",
+      "degree": "MS, Computer Science",
+      "start": "2024-08", "end": "2026-05",
+      "gpa": "3.93 / 4.00",
+      "coursework": ["Machine Learning","Data Mining","Data Science","Cloud Computing","Parallel Processing","Analysis of Algorithms","Operating Systems","Computer Architecture"]
+    }
+  ],
+  "skills": {
+    "Languages": ["Python","Java","C++","C","SQL","TypeScript","JavaScript","PHP","Apex","SOQL"],
+    "Backend & Data": ["REST APIs","Microservices","System design","ETL","Data modeling","PostgreSQL","MySQL","Redis"],
+    "Cloud & Infra": ["AWS (EC2, S3, VPC)","Azure","Docker","Kubernetes","Linux","CI/CD","Git","Observability"],
+    "AI & ML": ["PyTorch","RAG pipelines","LLM evaluation","LangChain","Chroma","Ollama","OpenCV","YOLO","Sensor fusion","CUDA","TensorRT"],
+    "Certifications": ["Microsoft Azure Certified","7× Salesforce Certified"]
+  }
+}
