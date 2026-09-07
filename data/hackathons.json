@@ -1,7 +1,7 @@
 {
   "_note": "Hand-maintained source of truth. The nightly Devpost sync only enriches these entries and appends newly discovered ones, so a scrape failure changes nothing.",
   "user": "nvnj",
-  "fetchedAt": "2026-09-06T10:06:58.646Z",
+  "fetchedAt": "2026-09-07T11:21:48.750Z",
   "projects": [
     {
       "slug": "utsa-findmyspot",
