@@ -1,14 +1,14 @@
 {
   "github": {
     "ok": true,
-    "at": "2026-10-06T12:36:56.983Z",
+    "at": "2026-10-07T12:29:59.462Z",
     "count": 0,
     "error": null
   },
   "devpost": {
-    "ok": true,
+    "ok": false,
     "at": "2026-10-06T12:36:58.063Z",
     "count": 4,
-    "error": null
+    "error": "https://devpost.com/nvnj -> 403"
   }
 }
